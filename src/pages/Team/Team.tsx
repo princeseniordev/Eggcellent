@@ -1,11 +1,8 @@
 import { FC } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import Zoom from 'react-reveal/Zoom';
 import RubberBand from 'react-reveal/RubberBand';
 
 import styles from './styles.module.scss';
-import blueBall from './../../assets/images/blue-ball.png';
-import purpleBall from './../../assets/images/purple-ball.png';
 import pic1 from './../../assets/images/Pic_1.png';
 import pic2 from './../../assets/images/Pic_2.png';
 import pic3 from './../../assets/images/Pic_3.png';
@@ -45,16 +42,6 @@ const Team: FC = () => {
 						</div>
 					</div>
 				</div>
-				<Zoom>
-					<div className={`${styles['blue-ball']}`}>
-						<img src={blueBall} alt="" />
-					</div>
-				</Zoom>
-				<Zoom>
-					<div className={`${styles['purple-ball']}`}>
-						<img src={purpleBall} alt="" />
-					</div>
-				</Zoom>
 			</section>
 		</>
 	);

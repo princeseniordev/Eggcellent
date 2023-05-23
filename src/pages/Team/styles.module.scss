@@ -51,7 +51,7 @@
 
                 img {
                     width: 100%;
-                    max-width: 450px;
+                    max-width: 383px;
                 }
 
                 .name {
@@ -71,21 +71,6 @@
             }
         }
     }
-
-    .purple-ball {
-        position: absolute;
-        top: 50px;
-        left: -205px;
-        z-index: 1;
-    }
-
-    .blue-ball {
-        position: absolute;
-        bottom: -250px;
-        right: -50px;
-        z-index: 1;
-    }
-    
 }
 
 @media (max-width: 1600px) {
@@ -113,12 +98,6 @@
         gap: 10px;
         margin-bottom: 10px;
     }
-    .purple-ball {
-        position: absolute;
-        top: -267px !important;
-        left: -392px !important;
-        z-index: 1;
-    }
 }
 
 @media (max-width: 575.99px) {
@@ -141,13 +120,5 @@
     .team-profile-section .team .first-row .team-profile-card .designation {
         font-size: 24px;
         line-height: 32px;
-    }
-    .team-profile-section .purple-ball {
-        top: 88px;
-        left: -307px;
-    }
-    .team-profile-section .blue-ball {
-        bottom: -319px;
-        right: -170px;
     }
 }

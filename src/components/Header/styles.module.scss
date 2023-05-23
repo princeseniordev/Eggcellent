@@ -1,85 +1,70 @@
 .kut-header {
-    background-color: #fff;
-    box-shadow: 0 2px 8px #21252914;
-    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 23px 20px 8%;
     position: fixed;
     width: 100%;
-    top: 0;
-    margin: 0 auto;
     left: 0;
-    right: 0;
-    padding: 10px 0 10px 0;
+    top: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, .2), transparent);
+    z-index: 3000;
+
+    img {
+        width: 140px;
+        vertical-align: center;
+    }
+
+    .openNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: black;
+        cursor: pointer;
+    }
+
+    nav {
+        background-color: #8459ff !important;
+        
+        ul {
+            padding: 0;
+            li {
+                padding: 0 !important;
+                list-style-type: none;
+                
+                a {
+                    display: block;
+                    text-decoration: none;
+                    width: 100%;
+                    padding: 22px;
+                    color: white;
+                }
+
+                .metamaks {
+                    background: url('./../../assets/images/logos_metamask-icon.svg');
+                }
+
+                a:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.kut-header.kut-header-black {
+    transition: 1s;
+    background-color: #000;
     
-    .nav-str {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 36px;
-        color: #212529;
-        font-family: "Poppins",sans-seriF;
-        padding-top: 15px;
-        text-align: center;
+    .openNav {
+        background-color: white;
+        
+        svg path:not(:first-child) {
+            fill: black;
+        }
     }
 
-    .nav-str:hover {
-        color: #ffc807;
-    }
-
-    .nav-str.active {
-        color: #ffc807;
-    }
-
-    .btn-nav {
-        display: flex;
-        justify-content: center;
-    }
-
-    .btn-metamask {
-        display: flex;
-        justify-content: center;
-        background: #0098E5;
-        border-radius: 100px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 30px;
-        color: #fff;
-        padding: 12px 24px;
-        border: none;
-        outline: none;
-        font-family: "Poppins",sans-seriF;
-    }
-
-    .btn-paperWallet {
-        display: flex;
-        justify-content: center;
-        background: #8459FF;
-        border-radius: 100px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 30px;
-        color: #fff;
-        padding: 12px 24px;
-        border: none;
-        outline: none;
-        font-family: "Poppins",sans-seriF;
-    }
-
-    .nav-img {
-        margin-right: 6px;
-    }
-
-    .logo {
-        width: 120px;
-    }
-}
-
-@media screen and (min-width: 1300px) {
-    .nav-str {
-        padding-right: 40px !important;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .logo {
-        margin-left: 20px;
-    }
 }

@@ -1,50 +1,61 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import styles from './styles.module.scss';
+import SideNav, { MenuIcon } from 'react-simple-sidenav';
+import cn from 'classnames';
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import logo from './../../assets/images/logo2.png';
 import metamask from './../../assets/images/logos_metamask-icon.svg';
 import paper from './../../assets/images/paper-logo-icon.svg';
 
-interface ComProps {
-	children?: any;
-};
+const Header: FC = () => {
 
-const Header: FC<ComProps> = ({
-	children = ""
-}) => {
+	const [scrollPosition, setScrollPosition] = useState(0);
+
+	useEffect(() => {
+        const onScroll = () => setScrollPosition(window.pageYOffset);
+        window.removeEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
+		console.log("scrollposition", scrollPosition);
+        return () => window.removeEventListener('scroll', onScroll);
+    });
+
+	const [showNav, setShowNav] = useState(false);
+
+	const navItems = [
+		<a href="#main" onClick={() => setShowNav(false)}> Dashboard </a>,
+		<a href="#home" onClick={() => setShowNav(false)}> Home </a>,
+		<a href="#documentation" onClick={() => setShowNav(false)}> Documentation </a>,
+		<a href="#roadmap" onClick={() => setShowNav(false)}> Roadmap </a>,
+		<a href="#team" onClick={() => setShowNav(false)}> Team </a>,
+		<a href="#contact" onClick={() => setShowNav(false)}> Contact </a>,
+		<a href="#home" style={{ display: 'flex', alignItems: 'cemter' }}><i style={{ backgroundImage: `url(${metamask})`, width: '26px', height: '26px', marginRight: '7px' }}></i>Mint</a>,
+		<a href="#home" style={{ display: 'flex', alignItems: 'center' }}><i style={{ backgroundImage: `url(${paper})`, width: '26px', height: '26px', marginRight: '7px' }}></i>Mint</a>
+	];
+
+	const close = [<span onClick={() => setShowNav(false)} style={{ cursor: 'pointer' }}> &times; </span>];
+	
 	return (
-		<div className={`${styles['kut-header']}`}>
-			<Navbar collapseOnSelect expand="lg" bg="right" variant="right">
-				<Container>
-					<Navbar.Brand href="#home"><img className={`${styles['logo']}`} src={logo} alt=""/></Navbar.Brand>
-					<Navbar.Toggle aria-controls="navbarScroll" /> 
-					<Navbar.Collapse id="responsive-navbar-nav">
-						<Nav className="me-auto"></Nav>
-						<Nav>
-							<Nav.Link href="#home" className={`${styles['nav-str']}`}>Home</Nav.Link>
-							<Nav.Link href="#documentation" className={`${styles['nav-str']}`}>Documentation</Nav.Link>
-							<Nav.Link href="#roadmap" className={`${styles['nav-str']}`}>Roadmap</Nav.Link>
-							<Nav.Link href="#team" className={`${styles['nav-str']}`}>Team</Nav.Link>
-							<Nav.Link href="#contact" className={`${styles['nav-str']}`}>Contact</Nav.Link>
-							<Nav.Link href="#deets" className={`${styles['btn-nav']}`}>
-								<button className={`${styles['btn-metamask']}`}>
-									<img src={metamask} alt="" className={`${styles['nav-img']}`}/>
-									Mint
-								</button>
-							</Nav.Link>
-							<Nav.Link href="#deets" className={`${styles['btn-nav']}`}>
-								<button className={`${styles['btn-paperWallet']}`}>
-									<img src={paper} alt=""  className={`${styles['nav-img']}`}/>
-									Mint
-								</button>
-							</Nav.Link>
-						</Nav>
-					</Navbar.Collapse>
-				</Container>
-			</Navbar>
+		<div 
+			className={cn([
+				styles['kut-header'],
+                scrollPosition > 400 ? styles['kut-header-black'] : '',
+			])}
+		>
+			<img src={logo} alt="logo" />
+			<div className={`${styles['openNav']}`}  onClick={() => setShowNav(true)}>
+				<MenuIcon/>
+			</div>
+			<SideNav
+				showNav={showNav}
+				openFromRight={true}
+				onHideNav={() => setShowNav(false)}
+				style={{'zIndex': 5000}}
+				title={close}
+				titleStyle={{ backgroundColor: '#8459FF', 'lineHeight': 0, padding: '40px', 'textAlign': 'right'}}
+				items={navItems}
+				itemStyle={{ backgroundColor: '#8459FF' }}
+				itemHoverStyle={{ backgroundColor: '#CDDC39' }}
+			/>
 		</div>
 	)
 };
