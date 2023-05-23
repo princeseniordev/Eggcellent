@@ -1,0 +1,16 @@
+$color-primary: rgb(0, 119, 255);
+$color-secondary: rgb(0, 38, 255);
+$color-warning: orange;
+$color-info: rgb(0, 140, 255);
+$color-danger: rgb(163, 0, 0);
+$color-bg: white;
+
+$font-main: Poppins;
+$text-height: 6vw;
+$half-text-height: calc($text-height/2);
+$negative-half-text-height: calc($text-height/2*-1);
+$tw: 9ch;
+$ad: 12s;
+$vh: 9.07px;
+$ovh: 9.07px;
+$second-row-height: calc(var(--ovh, 1vh)*33);
