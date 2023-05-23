@@ -169,18 +169,12 @@
                 .marquee-inner {
                     display: flex;
                     position: relative;
-                    
-                    span {
-                        animation: marquee $ad linear infinite;
-                        font-size: 3vw;
-                        font-weight: 600;
-                        text-transform: uppercase;
-                        padding: 0 2vw;
-                        color: #752a8b;
-                        white-space: nowrap;
-                        width: $tw;
-                        will-change: transform;
-                    }
+                    font-size: 3vw;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding: 0 2vw;
+                    color: #752a8b;
+                    white-space: nowrap;
                 }
                 
             }

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+import Marquee from "react-fast-marquee";
 import Fade from 'react-reveal/Fade';
-import LightSpeed from 'react-reveal/LightSpeed'
+import LightSpeed from 'react-reveal/LightSpeed';
 
 import purpleBall from '../../assets/images/purple-ball.png';
 import orangeBall from '../../assets/images/orange-ball.png';
@@ -13,6 +13,7 @@ import chick3 from '../../assets/images/chick3.svg';
 import chick4 from '../../assets/images/chick4.svg';
 import chick5 from '../../assets/images/chick5.svg';
 
+import 'bootstrap/dist/css/bootstrap.css';
 import styles from './styles.module.scss';
 
 const Documentation: FC = () => {
@@ -73,7 +74,7 @@ const Documentation: FC = () => {
 						<p className={`${styles['heading-text-bold-oxanium']} ${styles['yellow-color']}`}>  EGGCELLENT  </p>
 						<div className={`${styles['good-marquee']}`}>
 							<div className={`${styles['marquee-inner']}`}>
-								<span>Eggcellent NFT Club is a new project by Minetopia NFT Mining Club, located in Sabah, Malaysia. It aims to meet the increasing demand for quality and nutrient-rich chicken eggs by offering locally-produced premium eggs.</span>
+								<Marquee>Eggcellent NFT Club is a new project by Minetopia NFT Mining Club, located in Sabah, Malaysia. It aims to meet the increasing demand for quality and nutrient-rich chicken eggs by offering locally-produced premium eggs.</Marquee>
 							</div>
 						</div>
 						{/* <p className={`${styles['heading']} ${styles['heading-text-bold-oxanium']} ${styles['purple-color']}`}> PHASE 2 </p> */}
