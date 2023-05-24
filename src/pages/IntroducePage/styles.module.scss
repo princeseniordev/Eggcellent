@@ -15,18 +15,10 @@
         transform: translate(-50%, -50%);
         padding: 30px 0;
         
-        .polygon {
-            width: 216px;
-            height: 90px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 72%);
-        }
-
         .rainbow {
             position: relative;
             overflow: hidden;
+            width: 400px;
             
             .video {
                 width: calc(100% - 2px);
@@ -45,10 +37,11 @@
             
                 mask {
                     rect {
-                        fill: #ffffff;
+                        fill: #fff;
                     }
                     text {
-                        font-size: 4rem;
+                        font-size: 8rem;
+                        font-family: Filson;
                         font-weight: 900;
                         text-transform: uppercase;
                     }
@@ -66,12 +59,13 @@
     .heading-sm {
         font-style: normal;
         font-weight: 700;
-        font-size: 27px;
+        font-size: 32px;
         line-height: 48px;
         text-align: center;
         text-transform: uppercase;
         color: #d8bad5;
         margin-bottom: 42px;
+        font-family: Filson;
     }
 
     .btn-start:hover {
@@ -79,24 +73,21 @@
     }
     
     .btn-start {
+        background: #8459FF;
+        border-radius: 100px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: #fff;
+        padding: 12px 24px;
+        border: none;
+        outline: none;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, 20vh);
+        transform: translate(-50%, 140%);
         z-index: 10;
-
-        button {
-            background: #8459FF;
-            border-radius: 100px;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 30px;
-            color: #fff;
-            padding: 12px 24px;
-            border: none;
-            outline: none;
-        }
     }
     
     img {
@@ -109,6 +100,7 @@
         left: 80px;
         max-width: 217px;
         width: 100%;
+        z-index: 10;
     }
     
     .orange-ball {
@@ -125,6 +117,7 @@
         right: 55px;
         max-width: 217px;
         width: 100%;
+        z-index: 10;
     }
     
     .yellow-ball {
@@ -133,6 +126,7 @@
         right: 917px;
         max-width: 150px;
         width: 100%;
+        z-index: 10;
     }
     
     .blue-ball {
@@ -144,6 +138,7 @@
         text-align: center;
         max-width: 207px;
         width: 100%;
+        z-index: 10;
     }
     
     .purple-ball {
@@ -151,31 +146,36 @@
         bottom: -150px;
         right: -90px;
         max-width: 430px;
+        z-index: 10;
         width: 100%;
     }
     
     .chick1 {
         position: absolute;
-        top: 50px;
-        left: 193px;
+        top: 3%;
+        left: 15%;
+        z-index: 10;
     }
     
     .chick2 {
         position: absolute;
-        top: 36px;
-        right: 277px;
+        top: 2%;
+        right: 13%;
+        z-index: 10;
     }
     
     .chick3 {
         position: absolute;
-        bottom: 60px;
-        left: 238px;
+        bottom: 3%;
+        left: 17%;
+        z-index: 10;
     }
     
     .chick4 {
         position: absolute;
-        bottom: 117px;
-        right: 296px;
+        bottom: 2%;
+        right: 16%;
+        z-index: 10;
     }
     
     .ball-animation {
@@ -198,4 +198,134 @@
     0%   {transform: translate(0);}
     65%  {transform: translateY(30px);}
     100% {transform: translate(0);}
+}
+
+
+@media (max-width: 1224px) {
+    .chick1 {
+        top: 0 !important;
+        left: 10% !important;
+    }
+    
+    .chick2 {
+        top: 0 !important;
+        right: 10% !important;
+    }
+    
+    .chick3 {
+        bottom: 2% !important;
+        left: 13% !important;
+    }
+    
+    .chick4 {
+        bottom: 2% !important;
+        right: 14% !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .yellow-ball {
+        display: none;
+    }
+    
+    .pink-ball {
+        display: none;
+    }
+
+    .aqua-ball {
+        top: 0 !important;
+        left: 1% !important;
+    }
+    .chick1 {
+        top: -5% !important;
+        left: 2% !important;
+    }
+    .chick2 {
+        right: 3% !important;
+    }
+    .chick3 {
+        left: 10% !important;
+    }
+    
+    .chick4 {
+        right: 3% !important;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .chick1 {
+        left: 0 !important;
+    }
+    
+    .chick2 {
+        top: -8% !important;
+        right: 0 !important;
+    }
+    
+    .chick3 {
+        left: 5% !important;
+    }
+    
+    .chick4 {
+        right: 0 !important;
+    }
+    .aqua-ball {
+        top: -10% !important;
+    }
+    .chick1 {
+        display: none;
+    }
+    .blue-ball {
+        right: -80% !important;
+    }
+    .purple-ball {
+        right: -25% !important;
+    }
+}
+
+@media (max-width: 564px) {
+    
+    .chick3 {
+        left: -8% !important;
+        bottom: -6% !important;
+    }
+    
+    .chick4 {
+        display: none;
+    }
+
+    .purple-ball {
+        bottom: -50% !important;
+        right: -50% !important;
+    }
+    .aqua-ball {
+        top: -20% !important;
+        left: -7% !important;
+    }
+    .blue-ball {
+        right: -100% !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .container .content .rainbow {
+        width: 300px;
+    }
+
+    .chick3 {
+        left: -66px !important;
+    }
+
+    .btn-start {
+        font-size: 13px !important;
+    }
+    .purple-ball {
+        bottom: -40% !important;
+        right: -50% !important;
+    }
+    .orange-ball {
+        bottom: -30% !important;
+        left: -40% !important;
+    }
 }
