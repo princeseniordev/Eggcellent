@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import SideNav, { MenuIcon } from 'react-simple-sidenav';
 import cn from 'classnames';
 
-import logo from './../../assets/images/logo2.png';
+import logo from './../../assets/images/logo.png';
 import metamask from './../../assets/images/logos_metamask-icon.svg';
 import paper from './../../assets/images/paper-logo-icon.svg';
 
@@ -38,7 +38,7 @@ const Header: FC = () => {
 		<div 
 			className={cn([
 				styles['kut-header'],
-                scrollPosition > 400 ? styles['kut-header-black'] : '',
+                scrollPosition > 400 ? styles['kut-header-white'] : '',
 			])}
 		>
 			<img src={logo} alt="logo" />

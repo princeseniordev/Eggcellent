@@ -51,7 +51,7 @@
 
     .dashboard {
         position: absolute;
-        top: 228px;
+        top: 30%;
         left: 30px;
         width: 18%;
             
@@ -61,7 +61,7 @@
     }
     .home {
         position: absolute;
-        top: 465px;
+        top: 50%;
         left: 200px;
         width: 18%;
         
@@ -71,7 +71,7 @@
     }
     .documentation {
         position: absolute;
-        top: 666px;
+        top: 80%;
         left: 400px;
         width: 18%;
 
@@ -81,7 +81,7 @@
     }
     .roadmap {
         position: absolute;
-        top: 666px;
+        top: 80%;
         right: 400px;
         width: 18%;
         
@@ -91,7 +91,7 @@
     }
     .team {
         position: absolute;
-        top: 465px;
+        top: 50%;
         right: 200px;
         width: 18%;
         
@@ -101,7 +101,7 @@
     }
     .contact {
         position: absolute;
-        top: 228px;
+        top: 30%;
         right: 30px;
         width: 18%;
         
