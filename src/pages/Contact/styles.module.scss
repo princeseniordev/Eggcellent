@@ -69,21 +69,11 @@
         position: relative;
     }
 
-    @media screen and (min-width: 1024px) {
-        .hat {
-            width: 160px;
-            height: 80px;
-            right: -80px;
-            top: -20px;
-        }
-    }
-
     .hat {
         width: 105px;
         height: 74px;
-        right: -55px;
-        top: 132px;
-        // /* display: block; */
+        right: -45px;
+        top: 138px;
         position: absolute;
     }
 
@@ -149,6 +139,9 @@
     .join-our-community-section .outer-div .left-div .heading-text-bold-oxanium {
         font-size: 5rem !important;
     }
+    .hat {
+        top: 130px !important;
+    }
 }
 
 @media (max-width: 768.99) {
@@ -185,6 +178,8 @@
         font-size: 3rem !important;
     }
     .join-our-community-section .hat {
-        top: 20px !important;
+        top: 46px !important;
+        right: -32px !important;
+        width: 73px;
     }
 }
