@@ -33,7 +33,7 @@ const IntroducePage: FC<ComProps> = ({
 							<defs>
 								<mask id="maskblack" x="0" y="0" width="100%" height="100%">
 									<rect x="0" y="0" width="100%" height="100%"></rect>
-									<text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle"> EGGCELENT Net Club </text>
+									<text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle"> EGGCELENT NFT Club </text>
 								</mask>
 							</defs>
 							<rect className={`${styles['rect']}`} x="0" y="0" width="100%" height="100%"></rect>
