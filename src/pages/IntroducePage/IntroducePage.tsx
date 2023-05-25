@@ -12,6 +12,7 @@ import chick1 from './../../assets/images/chick1.svg';
 import chick2 from './../../assets/images/chick2.svg';
 import chick3 from './../../assets/images/chick3.svg';
 import chick4 from './../../assets/images/chick4.svg';
+import polygon from './../../assets/images/polygon.png';
 
 interface ComProps {
 	children?: any;
@@ -32,13 +33,13 @@ const IntroducePage: FC<ComProps> = ({
 							<defs>
 								<mask id="maskblack" x="0" y="0" width="100%" height="100%">
 									<rect x="0" y="0" width="100%" height="100%"></rect>
-									<text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle"> EGGCELENT </text>
+									<text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle"> EGGCELENT Net Club </text>
 								</mask>
 							</defs>
 							<rect className={`${styles['rect']}`} x="0" y="0" width="100%" height="100%"></rect>
 						</svg>
 					</div>
-					<p className={`${styles['heading-sm']}`}>Net Club</p>
+					<img src={polygon} alt="" className={`${styles['polygon']}`} />
 				</div>
 				<Link to="/eggcellent"><button className={`${styles['btn-start']}`}> LET'S EXPLORE </button></Link>
 				<div className={`${styles['aqua-ball']} ${styles['animation-1']} ${styles['ball-animation']}`}>
