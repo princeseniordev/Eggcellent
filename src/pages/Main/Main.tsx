@@ -6,8 +6,7 @@ import banner from './../../assets/images/banner.jpg';
 const Main: FC = () => {
 	
 	return (
-		<section id="main" className={`${styles['main-section']}`}>
-			<img src={banner} alt="" />
+		<section id="main" className={`${styles['main-section']}`} style={{ backgroundImage: `url(${banner})` }}>
 		</section>
 	)
 };

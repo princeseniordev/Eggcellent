@@ -18,7 +18,7 @@
         .rainbow {
             position: relative;
             overflow: hidden;
-            width: 400px;
+            width: 380px;
             
             .video {
                 width: calc(100% - 2px);
@@ -310,7 +310,7 @@
 
 @media (max-width: 420px) {
     .container .content .rainbow {
-        width: 300px;
+        width: 280px;
     }
 
     .chick3 {
