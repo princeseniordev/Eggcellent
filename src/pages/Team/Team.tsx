@@ -28,8 +28,6 @@ const Team: FC = () => {
 							<p _ngcontent-ng-c1728332637="" className={`${styles['name']}`}>  CHUY  </p>
 							<p _ngcontent-ng-c1728332637="" className={`${styles['designation']}`}>Co-Founder (Marketing)</p>
 						</div>
-					</div>
-					<div className={`${styles['first-row']}`}>
 						<div className={`${styles['team-profile-card']}`}>
 							<img src={pic3} alt=''/>
 							<p _ngcontent-ng-c1728332637="" className={`${styles['name']}`}>  Tommy  </p>

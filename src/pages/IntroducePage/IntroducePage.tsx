@@ -33,15 +33,19 @@ const IntroducePage: FC<ComProps> = ({
 							<defs>
 								<mask id="maskblack" x="0" y="0" width="100%" height="100%">
 									<rect x="0" y="0" width="100%" height="100%"></rect>
-									<text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle"> EGGCELENT Net Club </text>
+									<text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle"> EGGCELENT NFT Club </text>
 								</mask>
 							</defs>
 							<rect className={`${styles['rect']}`} x="0" y="0" width="100%" height="100%"></rect>
 						</svg>
 					</div>
-					<img src={polygon} alt="" className={`${styles['polygon']}`} />
 				</div>
-				<Link to="/eggcellent"><button className={`${styles['btn-start']}`}> LET'S EXPLORE </button></Link>
+				<div className={`${styles['form-group']}`}>
+					<Link to="/eggcellent"><button className={`${styles['btn-start']}`}> LET'S EXPLORE </button></Link>
+					<div>
+						<img src={polygon} alt="" className={`${styles['polygon']}`} />
+					</div>
+				</div>
 				<div className={`${styles['aqua-ball']} ${styles['animation-1']} ${styles['ball-animation']}`}>
 					<img src={aquaBall} alt="" />
 				</div>

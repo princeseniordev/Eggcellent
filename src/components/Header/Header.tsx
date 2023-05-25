@@ -26,12 +26,12 @@ const Header: FC = () => {
 
 	const navItems = [
 		<a href="#home" onClick={() => setShowNav(false)}> Home </a>,
-		<a href="#documentation" onClick={() => setShowNav(false)}> Documentation </a>,
+		<a href="https://eggcellent.gitbook.io/docs/" target='_blank' rel="noreferrer" onClick={() => setShowNav(false)}> Gitbook </a>,
 		<a href="#roadmap" onClick={() => setShowNav(false)}> Roadmap </a>,
 		<a href="#team" onClick={() => setShowNav(false)}> Team </a>,
 		<a href="#contact" onClick={() => setShowNav(false)}> Contact </a>,
 		<a href="#home" style={{ display: 'flex', alignItems: 'center' }}><i style={{ backgroundImage: `url(${metamask})`, width: '26px', height: '26px', marginRight: '7px' }}></i>Mint</a>,
-		<a href="#home" style={{ display: 'flex', alignItems: 'center' }}><i style={{ backgroundImage: `url(${paper})`, width: '26px', height: '26px', marginRight: '7px' }}></i>Mint</a>
+		<a href="#home" style={{ display: 'flex', alignItems: 'center' }}><i style={{ backgroundImage: `url(${paper})`, width: '13px', height: '26px', marginRight: '10px', marginLeft: '5px' }}></i>Mint</a>
 	];
 
 	const close = [<span onClick={() => setShowNav(false)} style={{ cursor: 'pointer' }}>&times;</span>];
@@ -46,7 +46,7 @@ const Header: FC = () => {
 						<li><img src={logo} alt="logo"/></li>
 						<div>
 							<li><a href="#home">Home</a></li>
-							<li><a href="#documentation">Documentation</a></li>
+							<li><a href="https://eggcellent.gitbook.io/docs/" target='_blank' rel="noreferrer">Gitbook</a></li>
 							<li><a href="#roadmap">Roadmap</a></li>
 							<li><a href="#team">Team</a></li>
 							<li><a href="#contact">Contact</a></li>
