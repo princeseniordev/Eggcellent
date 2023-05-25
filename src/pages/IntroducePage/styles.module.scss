@@ -54,11 +54,6 @@
                 }
             }
         }
-
-        .polygon {
-            width: 60%;
-            margin-left: 21%;
-        }
     }
 
     .heading-sm {
@@ -88,11 +83,30 @@
         padding: 12px 24px;
         border: none;
         outline: none;
+    }
+    
+    .form-group {
         position: absolute;
-        top: 60%;
+        top: 53%;
         left: 50%;
-        transform: translate(-50%, 140%);
+        transform: translate(-50%, 50%);
         z-index: 15;
+
+        a {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+
+            .polygon {
+                width: 190px;
+                margin-top: 10px;
+            }
+        }
     }
     
     img {
@@ -264,6 +278,24 @@
     
 }
 
+@media (max-width: 650px) {
+    .container .form-group {
+            a {
+                .btn-start {
+                    font-size: 15px;
+                }
+            }
+            div {
+                .polygon {
+                    width: 150px;
+                }
+            }
+    }
+    .orange-ball {
+        left: -40% !important;
+    }
+}
+
 @media (max-width: 800px) {
     .chick1 {
         left: 0 !important;
@@ -343,4 +375,16 @@
         bottom: -30% !important;
         left: -40% !important;
     }
+    .container .form-group {
+        a {
+            .btn-start {
+                font-size: 14px;
+            }
+        }
+        div {
+            .polygon {
+                width: 130px;
+            }
+        }
+}
 }

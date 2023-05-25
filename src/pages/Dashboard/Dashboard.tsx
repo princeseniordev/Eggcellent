@@ -15,7 +15,6 @@ const Dashboard: FC = () => {
 			<div>
 				<Main></Main>
 				<Home></Home>
-				<Documentation></Documentation>
 				<Roadmap></Roadmap>
 				<Team></Team>
 				<Contact></Contact>
